@@ -22,7 +22,7 @@
 		"**/_fresh/*"
 	],
 	"imports": {
-		"/": "./",
+		"~/": "./",
 		"fresh": "jsr:@fresh/core@^2.0.0-alpha.25",
 		"@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
 		"preact": "npm:preact@^10.24.3",
@@ -35,7 +35,8 @@
 			"dom",
 			"dom.asynciterable",
 			"dom.iterable",
-			"deno.ns"
+			"deno.ns",
+			"deno.unstable"
 		],
 		"jsx": "precompile",
 		"jsxImportSource": "preact",

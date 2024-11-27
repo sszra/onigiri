@@ -1,4 +1,4 @@
-import { define } from "/utils/core.ts";
+import { define } from "~/utils/core.ts";
 
 export default define.page(({ Component }) => {
 	return (
