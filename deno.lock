@@ -24,6 +24,7 @@
     "jsr:@std/semver@1": "1.0.3",
     "npm:@preact/signals@^1.2.3": "1.3.0_preact@10.25.0",
     "npm:@preact/signals@^1.3.0": "1.3.0_preact@10.25.0",
+    "npm:@sapphire/snowflake@^3.5.5": "3.5.5",
     "npm:autoprefixer@10.4.17": "10.4.17_postcss@8.4.35",
     "npm:cssnano@6.0.3": "6.0.3_postcss@8.4.35",
     "npm:esbuild-wasm@0.23.1": "0.23.1",
@@ -269,6 +270,9 @@
         "@preact/signals-core",
         "preact"
       ]
+    },
+    "@sapphire/snowflake@3.5.5": {
+      "integrity": "sha512-xzvBr1Q1c4lCe7i6sRnrofxeO1QTP/LKQ6A6qy0iB4x5yfiSfARMEQEghojzTNALDTcv8En04qYNIco9/K9eZQ=="
     },
     "@trysound/sax@0.2.0": {
       "integrity": "sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA=="
@@ -1247,6 +1251,7 @@
       "jsr:@fresh/core@^2.0.0-alpha.25",
       "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
       "npm:@preact/signals@^1.3.0",
+      "npm:@sapphire/snowflake@^3.5.5",
       "npm:preact@^10.24.3",
       "npm:tailwindcss@3.4.3"
     ]
