@@ -49,6 +49,8 @@ export function Chat(
 					class="bg-slate-200 grow py-2 placeholder:text-slate-500 outline-none"
 					placeholder="Write a message.."
 					rows={1}
+					onInput={(input) => setInput(input.currentTarget.value)}
+					value={input}
 				/>
 				<button
 					class="bg-black rounded-full size-10"

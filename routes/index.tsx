@@ -7,7 +7,6 @@ export const handler = define.handlers({
 	async GET(_ctx) {
 		const roomId = "0";
 		const messages = await retrieveMessages(roomId);
-		console.log(messages);
 
 		return page({ messages, roomId });
 	},
