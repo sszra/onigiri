@@ -44,14 +44,17 @@ export function Chat(
 			>
 				{messages.map((message) => <Message data={message} />)}
 			</div>
-			<div class="flex bg-slate-200 p-3 gap-2 mb-4 rounded-full">
-				<input
-					class="grow bg-slate-200 outline-none placeholder:text-slate-500"
+			<div class="flex items-center bg-slate-200 p-3 gap-2 mb-4 rounded-full">
+				<textarea
+					class="bg-slate-200 grow py-2 placeholder:text-slate-500 outline-none"
 					placeholder="Write a message.."
-					onInput={(input) => setInput(input.currentTarget.value)}
-					value={input}
+					rows={1}
 				/>
-				<button class="bg-black rounded-full size-10" onClick={send}>
+				<button
+					class="bg-black rounded-full size-10"
+					onMouseDown={(event) => event.preventDefault()}
+					onClick={send}
+				>
 				</button>
 			</div>
 		</div>
