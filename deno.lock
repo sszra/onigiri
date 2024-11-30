@@ -7,30 +7,23 @@
     "jsr:@luca/esbuild-deno-loader@0.11": "0.11.0",
     "jsr:@std/assert@0.221": "0.221.0",
     "jsr:@std/bytes@^1.0.2": "1.0.4",
-    "jsr:@std/cli@^1.0.6": "1.0.7",
     "jsr:@std/crypto@1": "1.0.3",
     "jsr:@std/datetime@~0.225.2": "0.225.2",
     "jsr:@std/encoding@1": "1.0.5",
     "jsr:@std/encoding@^1.0.5": "1.0.5",
     "jsr:@std/fmt@1": "1.0.3",
-    "jsr:@std/fmt@^1.0.3": "1.0.3",
     "jsr:@std/fs@1": "1.0.6",
     "jsr:@std/html@1": "1.0.3",
-    "jsr:@std/html@^1.0.3": "1.0.3",
     "jsr:@std/http@^1.0.11": "1.0.11",
     "jsr:@std/json@1": "1.0.1",
     "jsr:@std/jsonc@1": "1.0.1",
     "jsr:@std/media-types@1": "1.1.0",
-    "jsr:@std/media-types@^1.1.0": "1.1.0",
-    "jsr:@std/net@^1.0.4": "1.0.4",
     "jsr:@std/path@0.221": "0.221.0",
     "jsr:@std/path@1": "1.0.8",
     "jsr:@std/path@^1.0.6": "1.0.8",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "jsr:@std/semver@1": "1.0.3",
-    "jsr:@std/streams@^1.0.8": "1.0.8",
     "npm:@preact/signals@^1.2.3": "1.3.0_preact@10.25.0",
-    "npm:@preact/signals@^1.3.0": "1.3.0_preact@10.25.0",
     "npm:@sapphire/snowflake@^3.5.5": "3.5.5",
     "npm:autoprefixer@10.4.17": "10.4.17_postcss@8.4.35",
     "npm:cssnano@6.0.3": "6.0.3_postcss@8.4.35",
@@ -51,14 +44,14 @@
         "jsr:@std/crypto",
         "jsr:@std/datetime",
         "jsr:@std/encoding@1",
-        "jsr:@std/fmt@1",
+        "jsr:@std/fmt",
         "jsr:@std/fs",
-        "jsr:@std/html@1",
+        "jsr:@std/html",
         "jsr:@std/jsonc",
-        "jsr:@std/media-types@1",
+        "jsr:@std/media-types",
         "jsr:@std/path@1",
         "jsr:@std/semver",
-        "npm:@preact/signals@^1.2.3",
+        "npm:@preact/signals",
         "npm:esbuild",
         "npm:esbuild-wasm",
         "npm:preact-render-to-string",
@@ -91,9 +84,6 @@
     "@std/bytes@1.0.4": {
       "integrity": "11a0debe522707c95c7b7ef89b478c13fb1583a7cfb9a85674cd2cc2e3a28abc"
     },
-    "@std/cli@1.0.7": {
-      "integrity": "98359df9df586a69015ba570305183b0cb9e7d53c05ea2016ef9a3e77e82c7cd"
-    },
     "@std/crypto@1.0.3": {
       "integrity": "a2a32f51ddef632d299e3879cd027c630dcd4d1d9a5285d6e6788072f4e51e7f"
     },
@@ -116,17 +106,7 @@
       "integrity": "7a0ac35e050431fb49d44e61c8b8aac1ebd55937e0dc9ec6409aa4bab39a7988"
     },
     "@std/http@1.0.11": {
-      "integrity": "f1928e69e7dcf1664e22d153934cb866bf31e1bbe4bc59f8ac1b4d0e98cb7558",
-      "dependencies": [
-        "jsr:@std/cli",
-        "jsr:@std/encoding@^1.0.5",
-        "jsr:@std/fmt@^1.0.3",
-        "jsr:@std/html@^1.0.3",
-        "jsr:@std/media-types@^1.1.0",
-        "jsr:@std/net",
-        "jsr:@std/path@^1.0.8",
-        "jsr:@std/streams"
-      ]
+      "integrity": "f1928e69e7dcf1664e22d153934cb866bf31e1bbe4bc59f8ac1b4d0e98cb7558"
     },
     "@std/json@1.0.1": {
       "integrity": "1f0f70737e8827f9acca086282e903677bc1bb0c8ffcd1f21bca60039563049f"
@@ -140,9 +120,6 @@
     "@std/media-types@1.1.0": {
       "integrity": "c9d093f0c05c3512932b330e3cc1fe1d627b301db33a4c2c2185c02471d6eaa4"
     },
-    "@std/net@1.0.4": {
-      "integrity": "2f403b455ebbccf83d8a027d29c5a9e3a2452fea39bb2da7f2c04af09c8bc852"
-    },
     "@std/path@0.221.0": {
       "integrity": "0a36f6b17314ef653a3a1649740cc8db51b25a133ecfe838f20b79a56ebe0095",
       "dependencies": [
@@ -154,9 +131,6 @@
     },
     "@std/semver@1.0.3": {
       "integrity": "7c139c6076a080eeaa4252c78b95ca5302818d7eafab0470d34cafd9930c13c8"
-    },
-    "@std/streams@1.0.8": {
-      "integrity": "b41332d93d2cf6a82fe4ac2153b930adf1a859392931e2a19d9fabfb6f154fb3"
     }
   },
   "npm": {
@@ -761,8 +735,8 @@
         "thenify-all"
       ]
     },
-    "nanoid@3.3.7": {
-      "integrity": "sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g=="
+    "nanoid@3.3.8": {
+      "integrity": "sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w=="
     },
     "node-releases@2.0.18": {
       "integrity": "sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g=="
