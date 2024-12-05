@@ -2,7 +2,7 @@ import { APIMessage } from "~/utils/chat.ts";
 
 export function Message({ data }: { data: APIMessage }) {
 	return (
-		<div class="flex flex-col bg-slate-100 p-3">
+		<div class="flex flex-col bg-slate-100 p-3 break-words">
 			<p>
 				{data.content.split("\n").map((content) => (
 					<>
