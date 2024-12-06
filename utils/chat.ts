@@ -1,20 +1,38 @@
+import { HttpError } from "fresh";
+import { STATUS_CODE } from "@std/http/status";
 import { kv } from "~/utils/core.ts";
 import { snowflake } from "~/utils/snowflake.ts";
 
-export async function createMessage(roomId: string, data: APICreateMessage) {
-	const id = snowflake();
-	const newMessage: APIMessage = {
-		id,
-		content: data.content,
-	};
+export async function createMessage(
+	roomId: string,
+	{ content }: APICreateMessage,
+) {
+	if (content.trim() !== "") {
+		const id = snowflake();
+		const newMessage: APIMessage = {
+			id,
+			content,
+		};
 
-	const { ok } = await kv.atomic().set(["messages", roomId, id], newMessage)
-		.commit();
+		const { ok } = await kv.atomic().set(
+			["messages", roomId, id],
+			newMessage,
+		)
+			.commit();
 
-	if (ok) {
-		return newMessage;
+		if (ok) {
+			return newMessage;
+		} else {
+			throw new HttpError(
+				STATUS_CODE.InternalServerError,
+				"Failed to create message.",
+			);
+		}
 	} else {
-		throw new Error("Failed to create message.");
+		throw new HttpError(
+			STATUS_CODE.BadRequest,
+			"Message content can't be empty.",
+		);
 	}
 }
 
