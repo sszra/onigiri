@@ -30,8 +30,8 @@ export function Chat(
 	}, []);
 
 	function send() {
-		if (input !== "") {
-			server.sendMessage(roomId, input);
+		if (input.trim() !== "") {
+			server.sendMessage(roomId, input.trim());
 			setInput("");
 		}
 	}
@@ -62,7 +62,7 @@ export function Chat(
 					class="flex justify-center items-center bg-black rounded-full pl-0.5 size-10 disabled:opacity-50"
 					onMouseDown={(event) => event.preventDefault()}
 					onClick={send}
-					disabled={input === ""}
+					disabled={input.trim() === ""}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
