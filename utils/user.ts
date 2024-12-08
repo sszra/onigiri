@@ -83,5 +83,5 @@ export interface APICreateUser extends Omit<APIUser, "id"> {
 
 export enum UserFlags {
 	None = 0,
-	Verified = 1 << 1,
+	Verified = 1 << 0,
 }
